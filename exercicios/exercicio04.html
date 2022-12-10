@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCÍCIO #04</title>
+    <style>
+        body {
+    background: #1fbce4;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    }
+    nav {
+    background: linear-gradient(to bottom, #002a61, #002a6186);
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 1px 1px 10px #00000033;
+    color: white;
+    }
+    div {
+    background-color: #002a61b7;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #00000049;
+    color: white;
+    padding: 10px;
+    }
+    .num {
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 15px;
+    width: 50%;
+    }
+    div > button {
+    padding: 10px;
+    border: none;
+    outline: none;
+    width: 50%;
+    background-color: #000000;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: bold;
+    }
+    button:hover {
+    background-color: #1fbce4;
+    }
+    footer {
+    background-color: #000000;
+    color: white;
+    width: 100%;
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.534);
+    }
+    footer, a {
+    text-decoration: none;
+    }
+    a:link {
+    color: white;
+    font-weight: bolder;
+    /*Estilo do link no estado inicial*/
+    }
+    a:hover {
+    color: #1fbce4;
+    transition: 0.5s;
+    /*define o estilo do link quando passa o mouse sobre ele*/
+    }
+    a:visited {
+    color: #b8f1ff;
+    font-weight: bolder;
+    /*define o estilo do link visitado*/
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>EXERCÍCIO #04</h1>
+            <h2>Prof. Gustavo Neitzke</h2>
+        </nav>
+    </header>
+    <main>
+       <div>
+        <p>Questão: Leia 2 números. Efetue as 4 operações matemáticas e mostre os resultados.</p>
+        <input type="text" id="value1" class="num" placeholder="Digite um valor A">
+        <br><br>
+        <input type="text" id="value2" class="num" placeholder="Digite um valor B">
+        <br><br>
+        <input type="radio" id="adicao" name="operation" value="adicao">
+        <label for="adicao">Adição</label>
+        <br><br>
+        <input type="radio" id="subtracao" name="operation" value="subtracao">
+        <label for="subtracao">Subtração</label>
+        <br><br>
+        <input type="radio" id="multiplicacao" name="operation" value="multiplicacao">
+        <label for="multiplicacao">Multiplicação</label>
+        <br><br>
+        <input type="radio" id="divisao" name="operation" value="divisao">
+        <label for="divisao">Divisão</label>
+        <br><br>
+        <button onclick="calculation()">Enviar</button>
+       </div>
+    </main>
+    <footer>
+        <p>Site criado por <a href="https://github.com/periclesperes" target="_blank">Péricles Peres</a></p>
+    </footer>
+</body>
+<script>
+    function calculation()
+    {
+        var a = parseInt(document.querySelector('#value1').value)
+        var b = parseInt(document.querySelector('#value2').value)
+        var selectOperation = document.querySelector('input[name="operation"]:checked').value
+        console.log(selectOperation)
+        var nameOperation,calculo;
+        if(selectOperation == 'adicao')
+        {
+            nameOperation = 'Adição'
+            calculo = a + b  
+        }
+        else if(selectOperation == 'subtracao')
+        {
+            nameOperation = 'Subtração'
+            calculo = a - b  
+        }
+        else if(selectOperation == 'multiplicacao')
+        {
+            nameOperation = 'Multiplicação'
+            calculo = a * b  
+        }
+        else if (selectOperation == 'divisao')
+        {
+            nameOperation = 'Divisão'
+            calculo = a / b  
+        }
+        alert(nameOperation+ ': '+calculo)
+    }
+</script>
+</html>
