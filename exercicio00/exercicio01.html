@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCÍCIO #00</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>EXERCÍCIO #01</h1>
+            <h2>Prof. Gustavo Neitzke</h2>
+        </nav>
+    </header>
+    <main>
+       <div>
+        <p>Leia o valor de um input, e mostre em um alert.</p>
+        <input type="text" id="num" placeholder="Digite um valor">
+        <br><br>
+        <button onclick="go()">Enviar</button>
+       </div>
+    </main>
+    <footer>
+        <p>Site criado por <a href="https://github.com/periclesperes" target="_blank">Péricles Peres</a></p>
+    </footer>
+</body>
+
+<script>
+    function go()
+    {
+        let valueInput = document.getElementById('num').value
+        alert(valueInput)
+    }
+</script>
+</html>
