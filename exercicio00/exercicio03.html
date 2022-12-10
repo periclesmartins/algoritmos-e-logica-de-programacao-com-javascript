@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCÍCIO #03</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>EXERCÍCIO #03</h1>
+            <h2>Prof. Gustavo Neitzke</h2>
+        </nav>
+    </header>
+    <main>
+       <div>
+        <p>Questão: Leia as idades de duas crianças. Após, calcular e mostrar a soma das idades e a média.</p>
+        <input type="number" id="crianca1" placeholder="Digite idade criança 1">
+        <br><br>
+        <input type="number" id="crianca2" placeholder="Digite idade criança 2">
+        <br><br>
+        <button onclick="somamedia()">Enviar</button>
+       </div>
+    </main>
+    <footer>
+        <p>Site criado por <a href="https://github.com/periclesperes" target="_blank">Péricles Peres</a></p>
+    </footer>
+</body>
+<script>
+    function somamedia()
+    {
+        var idade1 = parseInt(document.querySelector('#crianca1').value)
+        var idade2 = parseInt(document.querySelector('#crianca2').value)
+        var soma = idade1 + idade2
+        var media = soma / 2
+        
+        console.log('Soma: ' + soma)
+        console.log('Média: ' + media)
+    }
+</script>
+</html>
