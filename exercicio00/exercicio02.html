@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCÍCIO #02</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>EXERCÍCIO #02</h1>
+            <h2>Prof. Gustavo Neitzke</h2>
+        </nav>
+    </header>
+    <main>
+       <div>
+        <p>Questão: Leia valores A e B. Trocar os valores entre as duas variáveis, a variável A passa a possuir o valor da variável B e a variável B passa a possuir o valor da variável A.</p>
+        <input type="text" id="num-a" placeholder="Digite o valor A">
+        <br><br>
+        <input type="text" id="num-b" placeholder="Digite o valor B">
+        <br><br>
+        <button onclick="go()">Enviar</button>
+       </div>
+    </main>
+    <footer>
+        <p>Site criado por <a href="https://github.com/periclesperes" target="_blank">Péricles Peres</a></p>
+    </footer>
+</body>
+<script>
+    function go()
+    {
+        var a = document.getElementById('num-a').value
+        var b = document.getElementById('num-b').value
+        console.log('Variável A: ' + a)
+        console.log('Variável B: ' + b)
+        var c = b
+        var b = a
+        var a = c
+        console.log('Variável A: ' + a)
+        console.log('Variável B: ' + b)
+    }
+</script>
+</html>
